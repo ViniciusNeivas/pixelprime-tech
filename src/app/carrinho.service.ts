@@ -10,7 +10,8 @@ itens: IProdutoCarrinho[] = []
   constructor() { }
 
   obtemCarrinho(){
-    return JSON.parse(localStorage.getItem("carrinho") || "");
+    this.itens = JSON.parse(localStorage.getItem("carrinho") || "");
+    return this.itens
   }
 
   adicionarAoCarrinho(produto: IProdutoCarrinho){

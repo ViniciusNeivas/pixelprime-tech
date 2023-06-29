@@ -15,7 +15,7 @@
                 Quantidade:
                 <input type="number" [(ngModel)] = "itemCarrinho.quantidade">
             </label>
-            <button class="remove-button" (click)="carrinhoService.removerProdutoCarrinho(itemCarrinho.id)">
+            <button class="remove-button" (click)="removerProdutoCarrinho(itemCarrinho.id)">
                 <i class="fa-solid fa-rectangle-xmark"></i>
             </button>
         </li>
