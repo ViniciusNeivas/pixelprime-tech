@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CarrinhoService } from '../carrinho.service';
-import { IProdutoCarrinho } from '../produtos';
+import { IProdutoCarrinho, produtos } from '../produtos';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-carrinho',
@@ -11,7 +12,8 @@ export class CarrinhoComponent implements OnInit {
   itensCarrinho: IProdutoCarrinho[] = []
   total: number = 0
   constructor(
-    public carrinhoService:CarrinhoService
+    public carrinhoService:CarrinhoService,
+    private router: Router
   ){}
 
   ngOnInit(): void {
@@ -24,7 +26,9 @@ export class CarrinhoComponent implements OnInit {
   }
 
   comprar(){
-    
+    alert("Parabens você finalizou com sucesso a sua compra!")
+    this.carrinhoService.limparCarrinho()
+    this.router.navigate(["produtos"])
   }
 
   removerProdutoCarrinho(produtoId: number){
