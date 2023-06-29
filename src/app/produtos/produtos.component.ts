@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IProduto, produtos } from '../produtos';
+import { IProduto } from '../produtos';
 import { ProdutosService } from '../produtos.service';
 
 @Component({
@@ -17,6 +17,4 @@ constructor(
 ngOnInit():void {
   this.produtos = this.produtosService.getAll();
 }
-
-
 }

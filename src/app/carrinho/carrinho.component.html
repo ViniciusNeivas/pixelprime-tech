@@ -1,16 +1,15 @@
 <h2 class="cart-title">
     Carrinho
 </h2>
-
 <div>
     <ul>
         <li *ngFor="let itemCarrinho of itensCarrinho ">
             <img [src] = "itemCarrinho.imagem" alt="">
             <p>
-                {{ itemCarrinho.descricao}}
+                {{itemCarrinho.descricao}}
             </p>
             <p>
-                Preço: R$ {{ itemCarrinho.preco}}
+                Preço: R$ {{itemCarrinho.preco}}
             </p>
             <label>
                 Quantidade:

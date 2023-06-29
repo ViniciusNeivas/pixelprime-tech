@@ -8,7 +8,6 @@ export class NotificacaoService {
 
   constructor(
     private snackBar: MatSnackBar,
-
   ) { }
 
   notificar(mensagem: string){

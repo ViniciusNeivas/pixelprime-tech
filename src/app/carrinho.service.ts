@@ -10,8 +10,7 @@ itens: IProdutoCarrinho[] = []
   constructor() { }
 
   obtemCarrinho(){
-    this.itens= JSON.parse(localStorage.getItem("carrinho") || "");
-    return this.itens;
+    return JSON.parse(localStorage.getItem("carrinho") || "");
   }
 
   adicionarAoCarrinho(produto: IProdutoCarrinho){
@@ -27,7 +26,5 @@ itens: IProdutoCarrinho[] = []
   removerProdutoCarrinho(produtoId: number){
     this.itens = this.itens.filter(item => item.id !== produtoId);
     localStorage.setItem("carrinho", JSON.stringify(this.itens))
-
-    
   }
 }
