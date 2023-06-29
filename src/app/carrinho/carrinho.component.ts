@@ -9,17 +9,27 @@ import { IProdutoCarrinho } from '../produtos';
 })
 export class CarrinhoComponent implements OnInit {
   itensCarrinho: IProdutoCarrinho[] = []
-
+  total: number = 0
   constructor(
     public carrinhoService:CarrinhoService
   ){}
 
   ngOnInit(): void {
-    this.itensCarrinho = this.carrinhoService.obtemCarrinho()    
+    this.itensCarrinho = this.carrinhoService.obtemCarrinho() 
+    this.calcularTotal();   
+  }
+
+  calcularTotal(){
+    this.total = this.itensCarrinho.reduce((prev, curr) => prev + (curr.preco * curr.quantidade), 0);
+  }
+
+  comprar(){
+    
   }
 
   removerProdutoCarrinho(produtoId: number){
     this.itensCarrinho = this.itensCarrinho.filter(item => item.id !== produtoId)
     this.carrinhoService.removerProdutoCarrinho(produtoId)
+    this.calcularTotal();  
   }
 }
