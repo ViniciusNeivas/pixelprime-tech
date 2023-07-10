@@ -50,10 +50,12 @@
     font-weight: bold;
 }
 
-.product-item__price-deion {
+.product-item__price-description{
     color: var(--gray);
     font-size: 12px;
     font-weight: bold;
+    height: 20px;
+    margin-bottom: 2px;
 }
 
 .product-item__buy-button {
@@ -62,6 +64,8 @@
     color: white;
     font-size: 20px;
     padding: 6px 12px;
+    border-radius: 8px;
+    width: 200px;
 }
 
 .product-item__buy-button:hover {
