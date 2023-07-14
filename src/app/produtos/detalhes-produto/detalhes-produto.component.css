@@ -56,7 +56,7 @@ input[type=number] {
 }
 
 button {
-    background-color: var(--blue);
+    background-color: #FF5722;
     border: none;
     padding: 10px;
     color: white;

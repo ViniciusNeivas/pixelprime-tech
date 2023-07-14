@@ -1,28 +1,37 @@
-.search-form{
-    height: 44px;
+ .input-wrapper {
+    position: relative;
     display: flex;
-}
-
-.search-form input{
+  }
+  
+  .input-wrapper input {
     box-sizing: border-box;
-    height: 56px;
-    padding: 28px;
-    flex:1;
+    flex: 1;
     background-color: var(--light-gray);
-    color: var(--gray);
+    color: var(--dark-blue);
     border: none;
     transition: all -3s ease-in-out;
-    font-size: 22px;
+    font-size: 16px;
     border-radius: 10px 0 0px 10px;
-}
-
-.search-form button{
-    width: 56px;
-    height: 56px;
-    background-color: var(--blue);
-    border:none;
+    padding: 10px;
+    width: 500px;
+    border: 1px solid orange;
+  }
+  
+  .input-wrapper input.focused,
+  .input-wrapper button.focused {
+    border: 3px solid var(--tangerine) ;
+  }
+  
+  .input-wrapper button {
+    background: linear-gradient(to right, var(--orange2), var(--tangerine) );
+    border: none;
     color: #fff;
     font-size: 22px;
-    border-radius: 0px 10px 10px 0;
+    border-radius: 0 10px 10px 0;
+    width: 56px;
+    height: 100%;
     cursor: pointer;
-}
+    padding: 10px;
+  }
+  
+  

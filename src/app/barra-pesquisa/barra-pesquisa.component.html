@@ -1,6 +1,30 @@
-<form class="search-form" (ngSubmit) = "pesquisar()">
-    <input type="text" name="descricao" [(ngModel)] = "descricao">
+<!-- <form class="search-form" (ngSubmit) = "pesquisar()">
+    <input type="text" name="descricao" [(ngModel)] = "descricao" placeholder = "O que você precisa da PixelPrime Tech?">
     <button type="submit">
         <i class="fa-solid fa-magnifying-glass fa-bounce"></i>
     </button>
-</form>
+</form> -->
+
+<!-- <label class="search-form" (ngSubmit) = "pesquisar()">
+    <input type="text" name = "descrição" [(ngModel)]="descricao" placeholder="O que você precisa da PixelPrime Tech?" class="search-input">
+    <button type="submit" class="search-button">
+        <i class="fa-solid fa-magnifying-glass fa-bounce  search-icon"></i>
+    </button>
+  </label>
+   -->
+
+  
+   <form (ngSubmit)="pesquisar()">
+    <div class="input-wrapper">
+      <input type="text" name="descricao" [(ngModel)]="descricao" 
+             placeholder="O que você precisa da PixelPrime Tech?" 
+             [ngClass]="{'focused': isInputFocused}" 
+             (focus)="isInputFocused = true" (blur)="isInputFocused = false">
+      <button type="submit" class="search-button" 
+              [ngClass]="{'focused': isButtonFocused}" 
+              >
+        <i class="fa-solid fa-magnifying-glass fa-bounce"></i>
+      </button>
+    </div>
+  </form>
+  

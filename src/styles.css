@@ -57,6 +57,8 @@ table {
     --gray: rgba(88, 89, 91, 1);
     --light-gray: rgba(232, 232, 232, 1);    
     --light-gray-2: rgb(247, 247, 247);
+	--tangerine: #FFA500;
+	--orange2: #FF5722;
 }
 
 input, textarea, select {

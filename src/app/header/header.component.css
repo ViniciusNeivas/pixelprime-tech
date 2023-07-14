@@ -1,10 +1,14 @@
+header > a {
+    text-decoration: none;
+}
+
 .main-header {    
-    padding: 10px 0px;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    column-gap: 40px;
+    background-color: #FFCBA5;
+    /* background-color: #F6E0B2; */
+    height: 80px;
 }
 
 .main-header__title {    
@@ -13,15 +17,13 @@
 }
 
 .main-header__title--blue {
-    color: var(--blue);
     color: blue;
-    font-size:60px;
+    font-size: 30px;
 }
 
 .main-header__title--orange {
-    color: var(--orange);
     color: orange;
-    font-size:60px;
+    font-size: 30px;
 }
 
 .main-header__menu ul {
@@ -30,30 +32,38 @@
 }
 
 .main-header__menu a {
-    padding: 10px 10px;
-    color: var(--gray);
-    font-weight: 400;
+    padding: 10px 5px;
+    font-weight: 500;
     font-size: 22px;
     text-decoration: none;
     transition: all .3s ease-in-out;
+    align-items: center;
+    background: linear-gradient(to right, var(--orange2), var(--tangerine));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .main-header__menu a:hover {
-    background-color: var(--blue);
-    color: #fff;
+    background: linear-gradient(to right, var(--orange2), var(--tangerine));
+    -webkit-text-fill-color: #fff;
     border-radius: 10px;
 }
 
 .container-menu {
     display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    flex: 1;
+    flex-direction: row;
 }
 
 .badge-carrinho {
-    background-color: var(--dark-blue);
+    position: relative;
+    background: linear-gradient(to right, var(--orange2), var(--tangerine));
     padding: 5px 10px;    
     border-radius: 10px;
-    color: white;
+    -webkit-text-fill-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.main-header__menu a:hover .badge-carrinho {
+    background: #fff;
+    -webkit-text-fill-color: var(--tangerine);
 }

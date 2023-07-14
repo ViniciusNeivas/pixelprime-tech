@@ -1,10 +1,13 @@
 <header class="main-header">
-    <h1 class="main-header__title">
-        <span class="main-header__title--blue ">PixelPrime</span>
-        <span class="main-header__title--orange">Tech</span>
-    </h1>
+    <a routerLink="produtos">
+        <h1 class="main-header__title">
+            <span class="main-header__title--blue ">PixelPrime</span>
+            <span class="main-header__title--orange">Tech</span>
+        </h1>
+    </a>
+    <app-barra-pesquisa></app-barra-pesquisa>
     <div class="container-menu">
-    <nav class="main-header__menu ul">
+    <nav class="main-header__menu">
         <ul>
             <li>
                 <a routerLink="produtos">
@@ -16,13 +19,10 @@
                 <a routerLink="carrinho">
                     <i class="fa-solid fa-cart-shopping"></i>
                     Carrinho
-                    <span class="badge-carrinho ">
+                    <span class="badge-carrinho">
                         {{ carrinhoService.obtemCarrinho().length }}
                     </span>
                 </a>
-            </li>
-            <li>
-                <a></a>
             </li>
             <li>
                 <a routerLink="contato">
@@ -52,6 +52,6 @@
             </li>
         </ul>
     </nav>
-    <app-barra-pesquisa></app-barra-pesquisa>
+    
 </div>
 </header>

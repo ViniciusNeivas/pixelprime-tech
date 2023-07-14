@@ -59,7 +59,7 @@
 }
 
 .product-item__buy-button {
-    background-color: var(--blue);
+    background: linear-gradient(to right, var(--orange2), var(--tangerine) );
     border: none;
     color: white;
     font-size: 20px;

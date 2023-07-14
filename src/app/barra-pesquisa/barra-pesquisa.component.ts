@@ -7,7 +7,9 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./barra-pesquisa.component.css']
 })
 export class BarraPesquisaComponent implements OnInit {
-  descricao = " ";
+  descricao = '';
+  isInputFocused = false;
+  isButtonFocused = false;
 
   constructor(
     private router: Router
@@ -16,13 +18,12 @@ export class BarraPesquisaComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  pesquisar(){
-    if(this.descricao){
-      this.router.navigate(['produtos'], { queryParams: { descricao: this.descricao}});
+
+  pesquisar() {
+    if (this.descricao) {
+      this.router.navigate(['produtos'], { queryParams: { descricao: this.descricao } });
       return;
     }
     this.router.navigate(['produtos']);
-
-}
-
+  }
 }
